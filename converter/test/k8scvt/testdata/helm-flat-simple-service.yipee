@@ -62,7 +62,7 @@
    "key":"POD_FIELD_EXAMPLE",
    "valueFrom":
    {"fieldRef":
-    {"apiVersion":"extensions/v1beta1",
+    {"apiVersion":"apps/v1",
      "fieldPath":"spec.restartPolicy"}}},
   {"name":"http",
    "external":"",

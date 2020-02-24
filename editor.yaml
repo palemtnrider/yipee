@@ -37,7 +37,7 @@ spec:
   type: NodePort
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yipee-ui
@@ -48,14 +48,12 @@ spec:
       name: yipee
       component: yipee-ui
       yipee.io/yipee-ui: generated
-  rollbackTo:
-    revision: 0
   template:
     spec:
       imagePullSecrets: []
       containers:
       - name: yipee-ui
-        image: yipeeio/ui:2.1
+        image: yipeeio/ui:2.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
@@ -72,7 +70,7 @@ spec:
   replicas: 1
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yipee-backend
@@ -83,8 +81,6 @@ spec:
       name: yipee
       component: yipee-backend
       yipee.io/yipee-backend: generated
-  rollbackTo:
-    revision: 0
   template:
     spec:
       imagePullSecrets: []
@@ -93,13 +89,13 @@ spec:
         # env:
         #   - name: YIPEE_INSTALL_TYPE
         #     value: static
-        image: yipeeio/api:2.1
+        image: yipeeio/api:2.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
           protocol: TCP
       - name: yipee-converter
-        image: yipeeio/converter:2.1
+        image: yipeeio/converter:2.2
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
     metadata:

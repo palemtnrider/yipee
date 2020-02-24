@@ -83,7 +83,7 @@
    "key":"POD_FIELD_EXAMPLE",
    "valueFrom":
    {"fieldRef":
-    {"apiVersion":"extensions/v1beta1",
+    {"apiVersion":"apps/v1",
      "fieldPath":"spec.restartPolicy"}}},
   {"type":"environment-var",
    "container":"2ae92af3-adc0-45ce-985d-249d589e47e7",

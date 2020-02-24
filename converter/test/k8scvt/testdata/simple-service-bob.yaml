@@ -49,7 +49,7 @@ spec:
     protocol: TCP
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
@@ -94,7 +94,7 @@ spec:
   replicas: 1
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: uwsgi-nginx-flask
@@ -129,7 +129,7 @@ spec:
   replicas: 1
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql

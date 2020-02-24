@@ -1287,7 +1287,7 @@
   (remove! ?dspec)
   (insert! {:type :deployment
             :id (:id ?dspec)
-            :apiVersion "extensions/v1beta1" :kind "Deployment"
+            :apiVersion "apps/v1" :kind "Deployment"
             :metadata (assign-top-labels ?dspec)
             :spec (dissoc ?dspec :name :type :labels :top-labels
                           :claim-templates :id :__id)}))
@@ -1300,7 +1300,7 @@
   (remove! ?dsspec)
   (insert! {:type :daemonSet
             :id (:id ?dsspec)
-            :apiVersion "extensions/v1beta1" :kind "DaemonSet"
+            :apiVersion "apps/v1" :kind "DaemonSet"
             :metadata (assign-top-labels ?dsspec)
             :spec (dissoc ?dsspec :name :type :labels :top-labels :id :__id)}))
 

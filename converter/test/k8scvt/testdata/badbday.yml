@@ -81,7 +81,7 @@ spec:
   volumeName: redmine-public
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nginx
@@ -129,7 +129,7 @@ spec:
           claimName: redmine-publicclaim
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
@@ -174,7 +174,7 @@ spec:
           claimName: mysql-dataclaim
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redmine

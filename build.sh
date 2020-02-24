@@ -1,5 +1,5 @@
 #!/bin/bash
-TAG=2.0
+TAG=2.2
 
 ORG=$1 
 if [ -z "$ORG" ];

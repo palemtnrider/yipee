@@ -91,7 +91,7 @@ spec:
     protocol: TCP
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: secret-scanner
@@ -133,7 +133,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
@@ -175,7 +175,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: composecvt
@@ -220,7 +220,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: oscvt
@@ -262,7 +262,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: auth
@@ -318,7 +318,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yipee-validator
@@ -363,7 +363,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubecvt
@@ -408,7 +408,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ui
@@ -458,7 +458,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend

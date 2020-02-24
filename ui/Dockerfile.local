@@ -1,4 +1,4 @@
-FROM nginx:1.15.0
+FROM nginx:1.17
 ARG HTML_DEST=/usr/html
 ARG DEFAULT_CFG=default.conf
 RUN rm -rf /usr/html/index.html

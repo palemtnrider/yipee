@@ -2,7 +2,7 @@
 # and an empty file will abort the edit. If an error occurs while saving this file will be
 # reopened with the relevant failures.
 #
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -14,7 +14,7 @@ metadata:
   name: rr
   namespace: default
   resourceVersion: '121310'
-  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/rr
+  selfLink: /apis/apps/v1/namespaces/default/deployments/rr
   uid: 1087f682-5963-11e8-a41f-025000000001
 spec:
   replicas: 3

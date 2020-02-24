@@ -67,7 +67,7 @@ spec:
   type: ClusterIP
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: joomla
@@ -139,7 +139,7 @@ spec:
   revisionHistoryLimit: 2
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mariadb

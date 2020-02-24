@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: hello-world-deployment
@@ -29,7 +29,7 @@ spec:
    app: hello-world
  type: NodePort
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: default-http-backend
@@ -73,7 +73,7 @@ spec:
      targetPort: 8080
  type: NodePort
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: nginx-ingress-controller

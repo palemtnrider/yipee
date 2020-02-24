@@ -1,6 +1,6 @@
 {
   "name": "yipee",
-  "version": "2.0.229",
+  "version": "2.2.0",
   "peerDependencies": {
     "@angular/core": "~7.0.2",
     "@angular-devkit/core": "0.0.29",

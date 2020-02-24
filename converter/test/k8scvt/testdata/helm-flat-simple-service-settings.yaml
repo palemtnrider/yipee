@@ -26,7 +26,7 @@ deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_CONTAINER_FI
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_CONTAINER_FIELD_EXAMPLE_7ValueFrom8ResourceFieldRef9ContainerName10: "redis"
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_CONTAINER_FIELD_EXAMPLE_7ValueFrom8ResourceFieldRef9Resource10: "requests.memory"
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_POD_FIELD_EXAMPLE_7Name8: "POD_FIELD_EXAMPLE"
-deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_POD_FIELD_EXAMPLE_7ValueFrom8FieldRef9ApiVersion10: "extensions/v1beta1"
+deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_POD_FIELD_EXAMPLE_7ValueFrom8FieldRef9ApiVersion10: "apps/v1"
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_POD_FIELD_EXAMPLE_7ValueFrom8FieldRef9FieldPath10: "spec.restartPolicy"
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_REDIS_HOST_7Name8: "REDIS_HOST"
 deploymentWeb0Spec1Template2Spec3Containers4_name_python_5Env6_name_REDIS_HOST_7Value8: "localhost"
@@ -78,7 +78,7 @@ spec:
 ---
 multi-container/templates/DeploymentMysql.yaml:
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
@@ -122,7 +122,7 @@ spec:
 ---
 multi-container/templates/DeploymentWeb.yaml:
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web

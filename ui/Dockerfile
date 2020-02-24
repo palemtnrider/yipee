@@ -1,4 +1,4 @@
-FROM node:8.14.0-alpine as builder
+FROM node:13.8-alpine3.10 as builder
 WORKDIR /app
 COPY . /app
 RUN apk add --update --no-cache chromium && \
@@ -6,7 +6,7 @@ RUN apk add --update --no-cache chromium && \
     export CHROME_BIN=/usr/bin/chromium-browser && \
     npm run test-prod
 
-FROM nginx:1.15.5-alpine
+FROM nginx:1.17-alpine
 ARG HTML_DEST=/usr/html
 ARG DEFAULT_CFG=default.conf
 WORKDIR /app

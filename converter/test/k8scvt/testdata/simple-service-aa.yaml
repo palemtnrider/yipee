@@ -63,7 +63,7 @@ spec:
     protocol: TCP
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mariadb
@@ -112,7 +112,7 @@ spec:
   replicas: 1
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: joomla
