@@ -14,7 +14,6 @@ import { OpenShiftFileResponse } from '../../models/OpenShiftFileResponse';
 import { KubernetesFileResponse } from '../../models/KubernetesFileResponse';
 import { YipeeFileResponse, NamespaceResponse, YipeeResponse } from '../../models/YipeeFileResponse';
 import { ApiService } from './api.service';
-import { stringify } from '@angular/core/src/render3/util';
 
 describe('ApiService', () => {
 

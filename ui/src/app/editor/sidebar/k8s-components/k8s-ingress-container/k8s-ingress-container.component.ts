@@ -1,15 +1,12 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
 
 import { Ingress, IngressBackend, IngressTLS, IngressRule, IngressPath } from '../../../../models/k8s/Ingress';
 import { Label } from '../../../../models/common/Label';
-import { NameValuePairRaw } from '../../../../models/YipeeFileRaw';
 import { EditorService } from '../../../editor.service';
 import { EditorEventService } from '../../../editor-event.service';
-import { PortMapping } from '../../../../models/common/PortMapping';
 import { CustomValidators } from '../../../../shared/validators/custom-validators.validators';
-import { forEach } from '@angular/router/src/utils/collection';
+
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

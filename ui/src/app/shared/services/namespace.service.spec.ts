@@ -45,7 +45,7 @@ describe('NamespaceService', () => {
 
   it('should set _isLive to a boolean & return a boolean when loadAndReturnLiveStatus() is called', async(inject([NamespaceService, HttpTestingController], (namespaceService: NamespaceService, backend: HttpTestingController) => {
     namespaceService.loadAndReturnLiveStatus().subscribe(response => {
-      expect(response.value).toEqual(true);
+      expect(response).toEqual(true);
       expect(namespaceService._isLive).toEqual(true);
     });
     backend.expectOne('/api/configs').flush(response1);

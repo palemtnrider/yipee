@@ -16,7 +16,6 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../shared/services/api.service';
 import { UserService } from '../shared/services/user.service';
 import { UpdateService } from '../shared/services/update.service';
-import { balancePreviousStylesIntoKeyframes } from '@angular/animations/browser/src/util';
 
 describe('EditorComponent', () => {
   let component: EditorComponent;

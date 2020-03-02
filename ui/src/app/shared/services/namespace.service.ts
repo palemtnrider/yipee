@@ -2,7 +2,6 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { ApiService } from './api.service';
 import { NamespaceRaw } from '../../models/YipeeFileRaw';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/of';
 import { map, concatMap } from 'rxjs/operators';
 import { timer, pipe, from, Observable } from 'rxjs';
 
@@ -23,10 +22,10 @@ export class NamespaceService {
     return this._isLive;
   }
 
-  loadAndReturnLiveStatus(): Observable<any> {
+  loadAndReturnLiveStatus() {
     return this.apiService.getConfig().map((response: any) => {
       this._isLive = (response.data[0].YIPEE_INSTALL_TYPE === 'cluster');
-      return Observable.of(this._isLive);
+      return this._isLive;
     });
   }
 
