@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ClarityModule } from '@clr/angular';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
+import { HttpClientModule, HttpClient, HttpXhrBackend, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -13,8 +13,7 @@ import { HomeModule } from './home/home.module';
 
 import { CanDeactivateGuard } from './can-deactivate.guard';
 
-import { httpFactory } from './http-interceptor-factory';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpInterceptorService } from './http-interceptor.service';
 
 const appRoutes: Routes = [
   { path: '', loadChildren: 'app/home/home.module#HomeModule' },
@@ -33,16 +32,17 @@ const appRoutes: Routes = [
     EditorModule,
     RouterModule.forRoot(appRoutes),
     SharedModule.forRoot(),
-    HttpModule,
+    HttpClient,
     HttpClientModule
   ],
   providers: [
     HttpClientModule,
     {
-      provide: Http,
-      useFactory: httpFactory,
-      deps: [XHRBackend, RequestOptions]
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
     },
+    HttpClient,
     CanDeactivateGuard
   ],
   bootstrap: [AppComponent]

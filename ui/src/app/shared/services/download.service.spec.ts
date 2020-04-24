@@ -1,5 +1,5 @@
 import { TestBed, inject, tick, fakeAsync } from '@angular/core/testing';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of, Subscriber } from 'rxjs';
 import { delay } from 'rxjs/operators';
@@ -45,7 +45,7 @@ describe('DownloadService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpModule],
+      imports: [HttpClientModule],
       providers: [
         DownloadService,
         { provide: ApiService, useClass: MockApiService }

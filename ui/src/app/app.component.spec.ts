@@ -1,7 +1,7 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ApiService } from './shared/services/api.service';
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
       ],
       imports: [
         RouterTestingModule,
-        HttpModule
+        HttpClientModule
       ],
       providers: [
         ApiService

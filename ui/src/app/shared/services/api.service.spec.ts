@@ -2,7 +2,7 @@ import { TestBed, inject, async, fakeAsync, tick, flush } from '@angular/core/te
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { Response, ResponseOptions } from '@angular/http';
+import { HttpResponse } from '@angular/common/http';
 
 import { UserInfoResponse } from '../../models/UserInfo';
 import { YipeeFileService } from './yipee-file.service';
@@ -468,15 +468,15 @@ describe('ApiService', () => {
   /* ----------------------------- */
 
   it('should return deleted application success', async(inject([ApiService, HttpTestingController], (service: ApiService, backend: HttpTestingController) => {
-    const response = new ResponseOptions({
+    const response = {
       body: JSON.stringify({
         success: true,
         total: 1,
         data: [yipeeMetadata]
       })
-    });
+    };
 
-    const baseResponse = new Response(response);
+    const baseResponse = new HttpResponse(response);
     service.deleteApp(appId).subscribe(data => {
       expect(data).toEqual(deleteAppResponse);
     });

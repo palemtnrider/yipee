@@ -1,6 +1,6 @@
-import {XHRBackend, Http, RequestOptions} from '@angular/http';
+import {HttpXhrBackend, HttpClient, HttpRequest, HttpHeaders, HttpParams} from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
 
-export function httpFactory(xhrBackend: XHRBackend, requestOptions: RequestOptions): Http {
-    return new HttpInterceptorService(xhrBackend, requestOptions);
-}
+// export function httpFactory(xhrBackend: HttpXhrBackend, requestOptions: {headers: HttpHeaders, params: HttpParams}): HttpClient {
+//     return new HttpInterceptorService(xhrBackend, requestOptions);
+// }

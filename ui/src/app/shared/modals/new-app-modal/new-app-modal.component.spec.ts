@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs';
 
@@ -148,7 +148,7 @@ describe('NewAppModalComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ NewAppModalComponent ],
       imports: [
-        HttpModule,
+        HttpClientModule,
         ReactiveFormsModule
       ],
       schemas: [

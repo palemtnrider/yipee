@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgZone } from '@angular/core';
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs';
@@ -157,7 +157,7 @@ describe('ImportAppModalComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ImportAppModalComponent],
       imports: [
-        HttpModule,
+        HttpClientModule,
         HttpClientTestingModule,
         ReactiveFormsModule,
         FormsModule

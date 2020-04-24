@@ -1,6 +1,6 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs';
 
@@ -63,7 +63,7 @@ describe('EditorService', () => {
       schemas: [
         NO_ERRORS_SCHEMA
       ],
-      imports: [HttpModule],
+      imports: [HttpClientModule],
       providers: [
         EditorEventService,
         EditorService,
