@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DndModule } from 'ng2-dnd';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EditorComponent } from './editor.component';
 import { SharedModule } from '../shared/shared.module';
 import { CanvasComponent } from './canvas/canvas.component';
@@ -78,7 +77,7 @@ export const editorRoutes: Routes = [
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    DndModule.forRoot()
+    DragDropModule
   ],
   declarations: [
     EditorComponent,
@@ -148,9 +147,6 @@ export const editorRoutes: Routes = [
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
-  ],
-  exports: [
-    DndModule
   ]
 })
 export class EditorModule { }

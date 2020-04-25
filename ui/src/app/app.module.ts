@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ClarityModule } from '@clr/angular';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule, HttpClient, HttpXhrBackend, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -32,7 +32,6 @@ const appRoutes: Routes = [
     EditorModule,
     RouterModule.forRoot(appRoutes),
     SharedModule.forRoot(),
-    HttpClient,
     HttpClientModule
   ],
   providers: [

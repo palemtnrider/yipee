@@ -15,14 +15,8 @@
       <div class="panel-heading">
         Drag Init Containers To Order
       </div>
-      <div class="panel-body">
-        <ul class="list-group" dnd-sortable-container [sortableData]="initArray">
-          <li *ngFor="let initContainer of initArray; let i = index" class="card m1" dnd-sortable [sortableIndex]="i" (onDropSuccess)="handleChangeInitOrder()">
-            <span class="p5">
-                {{initContainer}}
-            </span>  
-          </li>
-        </ul>
+      <div cdkDropList class="panel-body" (cdkDropListDropped)="handleChangeInitOrder()">
+        <div *ngFor="let initContainer of initArray; let i = index" class="card m1" cdkDrag>{{i}}</div>
       </div>
     </div>
   </div>
