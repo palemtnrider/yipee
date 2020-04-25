@@ -292,8 +292,8 @@ the repo.  By default this will produce three images:
 
 ## Run with Locally Built Images
 - push the images to your kubernetes cluster
-- modify _yipee.yaml_ to reference those images
-- apply the modified yipee.yaml
+- for the editor, modify the kustomization.yaml and update the imaage settings
+- run `kubecel apply -k .`
 
 # Integration with other tools
 We've exposed an API that allows you to post your YAML file then open the browser with that file loaded.  This is to aid integration with things like `kubectl edit`

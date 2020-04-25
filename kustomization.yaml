@@ -1,0 +1,14 @@
+resources:
+- editor.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: yipeeio/ui
+  newName: localbuild/ui
+  newTag: "2.2"
+- name: yipeeio/api
+  newName: localbuild/api
+  newTag: "2.2"
+- name: yipeeio/converter
+  newName: localbuild/converter
+  newTag: "2.2"
