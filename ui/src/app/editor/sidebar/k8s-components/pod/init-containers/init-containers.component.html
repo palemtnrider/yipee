@@ -15,8 +15,8 @@
       <div class="panel-heading">
         Drag Init Containers To Order
       </div>
-      <div cdkDropList class="panel-body" (cdkDropListDropped)="handleChangeInitOrder()">
-        <div *ngFor="let initContainer of initArray; let i = index" class="card m1" cdkDrag>{{i}}</div>
+      <div cdkDropList class="panel-body" (cdkDropListDropped)="handleChangeInitOrder($event)">
+        <div *ngFor="let initContainer of initArray; let i = index" class="card m1" cdkDrag>{{initContainer}}</div>
       </div>
     </div>
   </div>

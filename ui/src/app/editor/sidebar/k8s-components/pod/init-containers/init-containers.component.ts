@@ -4,6 +4,7 @@ import { FormGroup, FormArray } from '@angular/forms';
 import { Container } from '../../../../../models/common/Container';
 import { ContainerGroup } from '../../../../../models/common/ContainerGroup';
 import { ValueChangeEvent } from '../../../../../models/Events';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'k8s-init-containers',
@@ -24,7 +25,10 @@ export class InitContainersComponent implements OnInit {
     this.initArray = [];
   }
 
-  handleChangeInitOrder() {
+  handleChangeInitOrder(event: CdkDragDrop<string[]>) {
+    const initContainer = this.initArray[event.previousIndex];
+    this.initArray.splice(event.previousIndex, 1);
+    this.initArray.splice(event.currentIndex, 0, initContainer);
     this.changeInitOrder.emit(this.initArray);
   }
 
