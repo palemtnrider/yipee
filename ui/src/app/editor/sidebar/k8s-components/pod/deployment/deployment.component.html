@@ -4,7 +4,7 @@
     <div style="padding-left: 5rem;" class="form-group">
         <label id="k8s-deployment-updatestrategy-label" style="width: 5rem;">Update Strategy</label>
         <div class="select">
-            <select formControlName="update_strategy">
+            <select clrSelect formControlName="update_strategy">
                 <option *ngFor="let option of updateStrategyOptions" [value]="option.value">
                     {{ option.name }}
                 </option>

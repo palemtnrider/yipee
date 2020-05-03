@@ -20,9 +20,9 @@
       </div>
     </div>
     <form [formGroup]="importApplicationForm" autocomplete="off" class="form-block">
-      <div class="form-group">
+      <clr-input-container>
         <label for="applicationName">Application Name</label>
-        <input name="applicationName" class="text-field form-control" placeholder="Application Name" formControlName="applicationName"
+        <input clrInput name="applicationName" class="text-field form-control" placeholder="Application Name" formControlName="applicationName"
           type="text" id="applicationName" required autofocus />
         <div *ngIf="importApplicationForm.controls.applicationName.invalid && (importApplicationForm.controls.applicationName.dirty || importApplicationForm.controls.applicationName.touched)"
           class="alert alert-danger">
@@ -42,7 +42,7 @@
             Name can only contain letters, numbers, "_", and "-".
           </div>
         </div>
-      </div>
+      </clr-input-container>
     </form>
 
     <div>

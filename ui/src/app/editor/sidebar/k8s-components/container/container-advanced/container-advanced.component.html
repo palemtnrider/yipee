@@ -32,7 +32,7 @@
       <div style="padding-left: 4rem;" class="form-group">
         <label id="k8s-container-imagepullpolicy-label" style="width: 4rem;">Image Pull</label>
         <div class="select">
-          <select formControlName="image_pull_policy">
+          <select clrSelect formControlName="image_pull_policy">
             <option *ngFor="let option of imagePullPolicyOptions" [value]="option.value">
                 {{ option.name }}
             </option>

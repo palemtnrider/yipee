@@ -27,7 +27,7 @@
         <tbody *ngFor="let object of rule; let i = index" [formGroupName]="i">
           <tr>
             <td style="text-align: left; width: 90%">
-              <div class="form-group">
+              <clr-input-container>
                 <label style="display: inline" class="table-input" [ngClass]="rule[i].controls.host.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">Host
                   <input placeholder="Optional" maxlength="128" type="text" formControlName="host">
                   <span class="tooltip-content">
@@ -36,7 +36,7 @@
                     </span>
                   </span>
                 </label>
-              </div>
+              </clr-input-container>
             </td>
             <td style="width: 10%">
               <clr-icon shape="minus-circle" class="is-highlight" (click)="handleRemoveRule(i)"></clr-icon>
@@ -69,7 +69,7 @@
                     <td style="width: 30%">
                       <label class="table-input" [ngClass]="rule[i].controls.paths.controls[j].controls.service.invalid ? 'tooltip tooltip-validation tooltip-bottom-right invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
                         <div class="select">
-                          <select formControlName="service">
+                          <select clrSelect formControlName="service">
                             <option [value]="">
                               -- Select a service --
                             </option>

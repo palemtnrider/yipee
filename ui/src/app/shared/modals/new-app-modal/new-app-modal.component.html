@@ -1,4 +1,4 @@
-<form [formGroup]="newApplicationForm" (ngSubmit)="createNewApp(newApplicationForm.value)" autocomplete="off">
+<form clrForm [formGroup]="newApplicationForm" (ngSubmit)="createNewApp(newApplicationForm.value)" autocomplete="off">
   <clr-modal #createNewModal [clrModalClosable]="false" [(clrModalOpen)]="show" [clrModalSize]="'md'" [clrModalHeight]="'lg'">
     <h3 class="modal-title">Create New Application</h3>
     <div class="modal-body">
@@ -15,9 +15,9 @@
         </div>
       </div>
       <section class="form-block">
-        <div class="form-group">
+        <clr-input-container>
           <label for="applicationName">Application Name</label>
-          <input name="applicationName" class="text-field form-control" placeholder="Application Name" formControlName="applicationName"
+          <input clrInput name="applicationName" class="text-field form-control" placeholder="Application Name" formControlName="applicationName"
             type="text" id="applicationName" required autofocus/>
           <div *ngIf="applicationName.invalid && (applicationName.dirty || applicationName.touched)" class="alert alert-danger">
             <div *ngIf="applicationName.errors.required">
@@ -36,7 +36,7 @@
               Name can only contain letters, numbers, "_", and "-".
             </div>
           </div>
-        </div>
+        </clr-input-container>
 
       </section>
     </div>

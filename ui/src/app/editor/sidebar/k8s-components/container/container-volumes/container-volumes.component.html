@@ -67,7 +67,7 @@
             <td>
               <label class="table-input">
                 <div class="select">
-                  <select formControlName="access_mode">
+                  <select clrSelect formControlName="access_mode">
                     <option *ngFor="let option of accessModeOptions[i]" [value]="option.value">
                       {{ option.name }}
                     </option>

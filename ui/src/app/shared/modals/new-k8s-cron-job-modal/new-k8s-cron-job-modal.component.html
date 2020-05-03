@@ -1,11 +1,11 @@
 <clr-modal #newVolumeModal [(clrModalOpen)]="show" [clrModalClosable]="false">
   <h3 class="modal-title align-left">New Cron Job Controller</h3>
   <div style="padding-bottom: 20px;" class="modal-body align-left">
-    <form class="form compact" [formGroup]="form">
-      <div class="form-group">
+    <form clrForm  [formGroup]="form">
+      <clr-input-container>
         <label id="new-cron-job-controller-name-label">Name</label>
         <label class="table-input" [ngClass]="form.controls.name.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="name">
+          <input clrInput maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="name">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.name.errors?.required == true">Name is Required
               <br/>
@@ -31,83 +31,83 @@
             <span *ngIf="this.form.controls.name.errors?.duplicateNameValidator == true">Name must be unique, a container already exists with this name.</span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-description-label">Description</label>
         <label class="table-input" style="width:100%" [ngClass]="form.controls.description.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input id="k8s-new-deployment-description-input" maxlength="128" class="table-input" type="text" formControlName="description"
+          <input clrInput id="k8s-new-deployment-description-input" maxlength="128" class="table-input" type="text" formControlName="description"
             style="width:100%">
           <span class="tooltip-content">
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-backoff-limit-label">Backoff Limit</label>
         <label class="table-input" [ngClass]="form.controls.backoffLimit.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="backoffLimit">
+          <input clrInput maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="backoffLimit">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.backoffLimit.errors?.required == true">Backoff Limit is required<br/></span>
             <span *ngIf="this.form.controls.backoffLimit.errors?.numericOneOrGreater == true">Backoff Limit must be 1 or greater<br/></span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-active-deadline-seconds-label">Active Deadline Seconds</label>
         <label class="table-input" [ngClass]="form.controls.activeDeadlineSeconds.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="activeDeadlineSeconds">
+          <input clrInput maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="activeDeadlineSeconds">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.activeDeadlineSeconds.errors?.required == true">Active Deadline Seconds is required<br/></span>
             <span *ngIf="this.form.controls.activeDeadlineSeconds.errors?.numericOneOrGreater == true">Active Deadline Seconds must be 1 or greater<br/></span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-starting-deadline-seconds-label">Starting Deadline Seconds</label>
         <label class="table-input" [ngClass]="form.controls.startingDeadlineSeconds.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" type="number" formControlName="startingDeadlineSeconds">
+          <input clrInput maxlength="253" class="table-input" type="number" formControlName="startingDeadlineSeconds">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.startingDeadlineSeconds.errors?.numericOneOrGreater == true">Starting Deadline Seconds must be 1 or greater<br/></span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-completions-label">Completions</label>
         <label class="table-input" [ngClass]="form.controls.completions.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" type="number" formControlName="completions">
+          <input clrInput maxlength="253" class="table-input" type="number" formControlName="completions">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.completions.errors?.numericOneOrGreater == true">Starting Deadline Seconds must be 1 or greater<br/></span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-parallelism-label">Parallelism</label>
         <label class="table-input" [ngClass]="form.controls.parallelism.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" type="number" formControlName="parallelism">
+          <input clrInput maxlength="253" class="table-input" type="number" formControlName="parallelism">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.parallelism.errors?.numericOneOrGreater == true">Parallelism must be 1 or greater<br/></span>
           </span>
         </label>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-concurrency-policy-label">Concurrency Policy</label>
         <div class="select">
-          <select formControlName="concurrencyPolicy">
+          <select clrSelect formControlName="concurrencyPolicy">
             <option *ngFor="let option of concurrencyPolicyOptions" [value]="option.value">
               {{ option.name }}
             </option>
           </select>
         </div>
-      </div>
-      <div class="form-group">
+      </clr-input-container>
+      <clr-input-container>
         <label id="new-cron-job-controller-cron-schedule-label">Cron Schedule</label>
         <label class="table-input" [ngClass]="form.controls.schedule.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-          <input maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="schedule">
+          <input clrInput maxlength="253" class="table-input" placeholder="Required" type="text" formControlName="schedule">
           <span class="tooltip-content">
             <span *ngIf="this.form.controls.schedule.errors?.required == true">Schedule is required<br/></span>
             <span *ngIf="this.form.controls.schedule.errors?.cronTimeValidator == true">Schedule must be in CRON format.<br/></span>
           </span>
         </label>
-      </div>
+      </clr-input-container>
     </form>
   </div>
   <div style="padding-top: 0px;" class="modal-footer">

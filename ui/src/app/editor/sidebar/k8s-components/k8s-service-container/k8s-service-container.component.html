@@ -8,7 +8,7 @@
         Name
       </label>
       <label class="table-input" [ngClass]="form.controls.name.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-        <input maxlength="253" class="table-input" placeholder="Required" formControlName="name" type="text">
+        <input clrInput maxlength="253" class="table-input" placeholder="Required" formControlName="name" type="text">
         <span class="tooltip-content">
           <span *ngIf="this.form.controls.name.errors?.required == true">Name is Required
             <br/>
@@ -41,7 +41,7 @@
     <div style="padding-left: 4rem;" class="form-group">
       <label id="k8s-service-type-label" style="width: 4rem;">Type</label>
       <div style="margin-right: 35px;" class="select">
-        <select formControlName="service_type">
+        <select clrSelect formControlName="service_type">
           <option *ngFor="let option of serviceTypeOptions" [value]="option.value">
             {{ option.name }}
           </option>

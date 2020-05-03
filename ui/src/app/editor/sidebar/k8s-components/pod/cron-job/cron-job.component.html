@@ -44,7 +44,7 @@
       Starting Deadline Seconds
     </label>
     <label class="table-input" [ngClass]="form.controls.startingDeadlineSeconds.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-      <input maxlength="128" type="number" formControlName="startingDeadlineSeconds">
+      <input clrInput maxlength="128" type="number" formControlName="startingDeadlineSeconds">
       <span class="tooltip-content">
         <span *ngIf="this.form.controls.startingDeadlineSeconds.errors?.numericOneOrGreater == true">Starting Deadline Seconds must be 1 or greater
           <br/>
@@ -60,7 +60,7 @@
       Completions
     </label>
     <label class="table-input" [ngClass]="form.controls.completions.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-      <input maxlength="128" type="number" formControlName="completions">
+      <input clrInput maxlength="128" type="number" formControlName="completions">
       <span class="tooltip-content">
         <span *ngIf="this.form.controls.completions.errors?.numericOneOrGreater == true">Starting Deadline Seconds must be 1 or greater
           <br/>
@@ -76,7 +76,7 @@
       Parallelism
     </label>
     <label class="table-input" [ngClass]="form.controls.parallelism.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-      <input maxlength="128" type="number" formControlName="parallelism">
+      <input clrInput maxlength="128" type="number" formControlName="parallelism">
       <span class="tooltip-content">
         <span *ngIf="this.form.controls.parallelism.errors?.numericOneOrGreater == true">Parallelism must be 1 or greater
           <br/>
@@ -90,7 +90,7 @@
   <div style="padding-left: 8rem;" class="form-group">
     <label id="k8s-cron-job-concurrency-policy-label" style="width: 8rem;">Concurrency Policy</label>
     <div class="select">
-      <select formControlName="concurrencyPolicy">
+      <select clrSelect formControlName="concurrencyPolicy">
         <option *ngFor="let option of concurrencyPolicyOptions" [value]="option.value">
           {{ option.name }}
         </option>
@@ -124,7 +124,7 @@
       Restart
     </label>
     <div class="select">
-      <select formControlName="restart">
+      <select clrSelect formControlName="restart">
         <option *ngFor="let option of restartOptions" [value]="option.value">
             {{ option.name }}
         </option>

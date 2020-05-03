@@ -3,7 +3,7 @@
     <h3 class="modal-title">Namespace Diff</h3>
     <div class="modal-body" [formGroup]="diffForm">
         Compare namespace {{ parentNamespace }} with
-        <select formControlName="childNamespace">
+        <select clrSelect formControlName="childNamespace">
             <option *ngFor="let ns of namespaces" [value]="ns.name">
                 {{ ns.name }}
             </option>

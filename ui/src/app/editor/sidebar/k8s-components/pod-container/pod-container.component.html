@@ -23,7 +23,7 @@
     <div style="padding-left: 5rem;" class="form-group">
       <label style="width: 5rem;">Name</label>
       <label class="table-input" [ngClass]="form.controls.name.invalid ? 'tooltip tooltip-validation tooltip-bottom-left invalid' : 'tooltip tooltip-validation tooltip-top-left' ">
-        <input maxlength="253" class="table-input" placeholder="Required" formControlName="name" type="text">
+        <input clrInput maxlength="253" class="table-input" placeholder="Required" formControlName="name" type="text">
         <span class="tooltip-content">
           <span *ngIf="this.form.controls.name.errors?.required == true">Name is Required
             <br/>
