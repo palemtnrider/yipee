@@ -24,16 +24,14 @@
           </span>
         </label>
       </clr-input-container>
-      <clr-input-container>
+      <clr-select-container>
         <label id="k8s-new-hostpath-host-path-type-label">Host Path Type</label>
-        <div class="select">
           <select clrSelect formControlName="host_path_type">
             <option *ngFor="let option of hostPathTypeOptions" [value]="option.value">
               {{ option.name }}
             </option>
           </select>
-        </div>
-      </clr-input-container>
+      </clr-select-container>
       <clr-input-container>
         <label>Host Path</label>
         <label aria-haspopup="true" role="tooltip" [ngClass]="(errors.hostPathTooltipErrors.length > 0) ? 'tooltip tooltip-validation tooltip-bottom-left invalid width-inherit' : 'tooltip tooltip-validation tooltip-top-left width-inherit'">

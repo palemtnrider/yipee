@@ -37,16 +37,14 @@
           </span>
         </label>
       </clr-input-container>
-      <clr-input-container>
+      <clr-select-container>
         <label id="k8s-new-statefulset-updatestrategy-label">Update Strategy</label>
-        <div class="select">
           <select clrSelect formControlName="update_strategy">
             <option *ngFor="let option of updateStrategyOptions" [value]="option.value">
               {{ option.name }}
             </option>
           </select>
-        </div>
-      </clr-input-container>
+      </clr-select-container>
     </form>
   </div>
   <div style="padding-top: 0px;" class="modal-footer">
